@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router.tsx";
+// import { RouterProvider } from "react-router-dom";
+// import { router } from "./router.tsx";
 import PWABadge from "./components/pwa-badge.tsx";
 
 import * as Sentry from "@sentry/react";
+import { Debug } from "./components/debug.tsx";
 
 Sentry.init({
   dsn: "https://a66eef9c0aaa54aab451554089b9bebd@o4507939319906304.ingest.us.sentry.io/4507939325411328",
@@ -21,7 +22,8 @@ Sentry.init({
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+    <Debug />
     <PWABadge />
   </React.StrictMode>,
 );
