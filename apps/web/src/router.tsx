@@ -5,7 +5,7 @@ import Root from "./routes/root";
 import NotFound from "./routes/not-found";
 import Error from "./routes/error";
 // import Explorer from "./routes/explorer";
-// import TxDetails from "./routes/tx-details";
+import TxDetails from "./routes/tx-details";
 
 export const router = createHashRouter([
   {
@@ -14,7 +14,7 @@ export const router = createHashRouter([
       // { path: "/", element: <Home /> },
       // { path: "/relayer", element: <Relayer /> },
       // { path: "/explorer", element: <Explorer /> },
-      // { path: "/tx/:id", element: <TxDetails /> },
+      { path: "/tx/:id", element: <TxDetails /> },
       { path: "*", element: <NotFound /> },
     ],
     errorElement: <Error />,
