@@ -27,7 +27,7 @@ function Links() {
   const data: TData[] = [
     { label: "Explorer", path: "/explorer" },
     { label: "XToken", path: "https://xtoken.box", external: true },
-    { label: "Docs14", path: "https://docs.helixbridge.app", external: true },
+    { label: "Docs15", path: "https://docs.helixbridge.app", external: true },
   ];
   const [network, setNetwork] = useState<TData>({ label: "Saa", path: "ss", pc: true, external: true });
 
