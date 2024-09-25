@@ -1,0 +1,45 @@
+{
+  "name": "helix-ui",
+  "description": "HelixBridge Interfaces",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && pnpm store prune && rm -rf .turbo node_modules",
+    "web": "pnpm --filter @helixbridge/web",
+    "build:web": "pnpm run build --filter @helixbridge/web",
+    "build:ui": "pnpm run build --filter @helixbridge/ui",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,yaml}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build --filter=./packages/* && changeset publish",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helix-bridge/helix-ui.git"
+  },
+  "keywords": [
+    "helix",
+    "helix-ui",
+    "helixbridge"
+  ],
+  "bugs": {
+    "url": "https://github.com/helix-bridge/helix-ui/issues"
+  },
+  "homepage": "https://github.com/helix-bridge/helix-ui#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "turbo": "^2.0.9"
+  },
+  "packageManager": "pnpm@9.4.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
